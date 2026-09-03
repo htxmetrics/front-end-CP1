@@ -1,0 +1,129 @@
+<!doctype html>
+<!-- color-scheme no <html> garante fundo claro mesmo em navegador no tema escuro. 
+      O Preflight do Tailwind deixa o canvas transparente e o texto ficaria invisivel. -->
+<html lang="pt-BR" style="color-scheme: light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Turno — Feira de Gastronomia Noturna</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3"></script>
+
+  <!-- ============================================================ 
+        ÁREA EDITÁVEL — o <head> é seu. 
+        Carregue aqui as fontes da sua carta e declare os tokens. 
+        Os seis tokens abaixo são obrigatórios e os nomes não mudam. 
+        ============================================================ -->
+
+  <!-- 1. Fontes da sua carta (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&family=Manrope:wght@400;600&display=swap">
+
+  <!-- 2. Tokens da sua carta -->
+  <style type="text/tailwindcss">
+    @theme { 
+       /* Os três hex vêm da sua carta. Decida qual é fundo, qual é tinta e qual é destaque. */ 
+       --color-marca-50:  #14141A;
+       --color-marca-900: #F5F5F0;
+       --color-marca-500: #E4FF3A;
+
+       /* O par tipográfico da sua carta. */ 
+       --font-display: "Antonio", sans-serif;
+       --font-corpo:   "Manrope", sans-serif;
+
+       /* O raio de canto da sua carta. */ 
+       --radius-card: 2px;
+     } 
+   </style>
+
+  <!-- ============================================================ 
+        FIM DA ÁREA EDITÁVEL 
+        Daqui para baixo, você só adiciona class="" e troca textos. 
+        ============================================================ -->
+</head>
+
+<body class="bg-marca-50 text-marca-900 font-corpo min-h-screen antialiased">
+
+  <header id="topo" class="border-b border-marca-900/20">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#hero"
+        class="font-display text-3xl font-bold tracking-tight focus-visible:outline-2 focus-visible:outline-marca-500">Turno</a>
+      <nav aria-label="Principal" class="hidden md:block">
+        <ul class="flex items-center gap-8 text-xs font-semibold tracking-widest">
+          <li><a href="#hero"
+              class="hover:text-marca-500 transition-colors focus-visible:outline-2 focus-visible:outline-marca-500">O
+              evento</a></li>
+          <li><a href="#"
+              class="hover:text-marca-500 transition-colors focus-visible:outline-2 focus-visible:outline-marca-500">Ingressos</a>
+          </li>
+          <li><a href="#rodape"
+              class="hover:text-marca-500 transition-colors focus-visible:outline-2 focus-visible:outline-marca-500">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#"
+        class="bg-marca-900 text-marca-50 px-5 py-2.5 rounded-card text-xs font-bold tracking-widest hover:bg-marca-900/80 transition-colors focus-visible:outline-2 focus-visible:outline-marca-500">Garantir
+        ingresso</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pt-16 pb-24">
+
+    <section id="hero">
+      <p class="text-marca-500 text-xs font-semibold tracking-widest mb-3">3ª edição</p>
+      <h1 class="font-display text-7xl md:text-8xl font-bold tracking-tight leading-none mb-6">Turno</h1>
+      <p class="text-base md:text-lg text-marca-900/90 max-w-xl leading-relaxed mb-8">Feira de gastronomia noturna. Uma
+        noite tardio, elétrico e urbano, para quem atravessa a cidade atrás do que ainda não viu.</p>
+      <div class="flex flex-wrap gap-4 mb-16">
+        <a href="#"
+          class="bg-marca-500 text-marca-50 font-bold text-xs tracking-widest px-6 py-4 rounded-card hover:brightness-110 transition-all focus-visible:outline-2 focus-visible:outline-marca-500">Garantir
+          ingresso</a>
+        <a href="#rodape"
+          class="border border-marca-900 text-marca-900 font-bold text-xs tracking-widest px-6 py-4 rounded-card hover:bg-marca-900/10 transition-all focus-visible:outline-2 focus-visible:outline-marca-500">Como
+          chegar</a>
+      </div>
+      <dl class="pt-8 border-t border-marca-500 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div>
+          <dt class="text-marca-500 text-xs font-semibold tracking-widest mb-1">Data</dt>
+          <dd class="font-display text-2xl md:text-3xl font-bold">14 de novembro</dd>
+        </div>
+        <div>
+          <dt class="text-marca-500 text-xs font-semibold tracking-widest mb-1">Local</dt>
+          <dd class="font-display text-2xl md:text-3xl font-bold">Galpão da Vila</dd>
+        </div>
+        <div>
+          <dt class="text-marca-500 text-xs font-semibold tracking-widest mb-1">Ingressos</dt>
+          <dd class="font-display text-2xl md:text-3xl font-bold">A partir de R$ 40</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer id="rodape" class="border-t border-marca-900/20">
+    <div
+      class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <p class="font-display text-2xl font-bold tracking-tight">Turno</p>
+      <nav aria-label="Rodapé">
+        <ul class="flex flex-wrap items-center gap-6 text-xs font-semibold tracking-widest">
+          <li><a href="#"
+              class="hover:text-marca-500 transition-colors focus-visible:outline-2 focus-visible:outline-marca-500">Ingressos</a>
+          </li>
+          <li><a href="#"
+              class="hover:text-marca-500 transition-colors focus-visible:outline-2 focus-visible:outline-marca-500">Imprensa</a>
+          </li>
+          <li><a href="#topo"
+              class="hover:text-marca-500 transition-colors focus-visible:outline-2 focus-visible:outline-marca-500">Voltar
+              ao topo</a></li>
+        </ul>
+      </nav>
+      <p class="text-xs text-marca-900/70">Realização independente. São Paulo, 2026.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
